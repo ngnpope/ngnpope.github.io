@@ -1,0 +1,82 @@
+:root {
+    --main-bg: #266478;
+    --main-fg: #fff;
+    --link-fg: #ddd;
+    --selection-bg: #ec6e4a;
+    --social-facebook: #4267b2;
+    --social-github: #24292e;
+    --social-linkedin: #2867b2;
+    --social-twitter: #1da1f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--selection-bg);
+    text-shadow: none;
+}
+
+html {
+    background: var(--main-bg);
+    color: var(--main-fg);
+    font-family: 'Merriweather Sans', sans-serif;
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+}
+
+body {
+    align-content: center;
+    display: grid;
+    grid-template-areas: 'main' 'footer';
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+main {
+    align-content: center;
+    display: grid;
+    grid-area: main;
+    justify-content: center;
+    margin: 0;
+    padding: 1em;
+}
+
+p {
+    margin: 0 0 .5em;
+}
+
+a { color: inherit; text-decoration: underline dotted var(--link-fg); }
+
+nav.social {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1rem;
+    justify-content: center;
+}
+nav.social > a { display: inline-flex; }
+nav.social > a > svg { height: 1.5rem; width: 1.5rem; }
+nav.social > a:hover { background: var(--main-fg); border-radius: 2px; }
+nav.social > a:hover[href*=facebook] { color: var(--social-facebook); }
+nav.social > a:hover[href*=github] { color: var(--social-github); }
+nav.social > a:hover[href*=linkedin] { color: var(--social-linkedin); }
+nav.social > a:hover[href*=twitter] { color: var(--social-twitter); }
+
+ul.details { padding-inline-start: 2.5ch; }
+ul.details > li { font-size: 1.2rem; list-style: var(--bullet) outside; margin-block-end: 1rem; padding-inline-start: 1ch; }
+ul.details > li.job { --bullet: '💼'; }
+ul.details > li.code { --bullet: '🦄'; }  /* 🐍 */
+ul.details > li.place { --bullet: '📍'; }
+ul.details > li > span { font-size: 1rem; }
+
+@page {
+    size: A4 portrait;
+    margin: 1cm;
+}
+
+@media print {
+    * { text-shadow: none; }
+}
