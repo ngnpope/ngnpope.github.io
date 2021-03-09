@@ -66,11 +66,11 @@ nav.social > a:hover[href*=linkedin] { color: var(--social-linkedin); }
 nav.social > a:hover[href*=twitter] { color: var(--social-twitter); }
 
 ul.details { padding-inline-start: 2.5ch; }
-ul.details > li { font-size: 1.2rem; list-style: var(--bullet) outside; margin-block-end: 1rem; padding-inline-start: 1ch; }
-ul.details > li.job { --bullet: '💼'; }
-ul.details > li.code { --bullet: '🦄'; }  /* 🐍 */
-ul.details > li.place { --bullet: '📍'; }
-ul.details > li > span { font-size: 1rem; }
+ul.details > li { margin-block-end: 1rem; padding-inline-start: 1ch; }
+ul.details > li::marker { font-size: 1.2rem; }
+ul.details > li.job::marker { content: '💼'; }
+ul.details > li.code::marker { content: '🦄'; }  /* 🐍 */
+ul.details > li.place::marker { content: '📍'; }
 
 @page {
     size: A4 portrait;
