@@ -6,7 +6,8 @@
     --social-facebook: #4267b2;
     --social-github: #24292e;
     --social-linkedin: #2867b2;
-    --social-twitter: #1da1f2;
+    --social-mastodon: #6364ff;
+    --social-twitter: #000;
 }
 
 * {
@@ -63,6 +64,7 @@ nav.social > a:hover { background: var(--main-fg); border-radius: 2px; }
 nav.social > a:hover[href*=facebook] { color: var(--social-facebook); }
 nav.social > a:hover[href*=github] { color: var(--social-github); }
 nav.social > a:hover[href*=linkedin] { color: var(--social-linkedin); }
+nav.social > a:hover[href*=fosstodon] { color: var(--social-mastodon); }
 nav.social > a:hover[href*=twitter] { color: var(--social-twitter); }
 
 ul.details { padding-inline-start: 2.5ch; }
